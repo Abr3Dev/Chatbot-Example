@@ -1,0 +1,38 @@
+<div class="container">
+   <div class="chat">
+    <div class="middle" *ngFor="let conversation of conversations; let i = index">
+
+        <div class="message right" *ngIf="conversation.question">
+            <div class="message-text">{{conversation.question}}</div>
+        </div>
+
+        <div class="message left" *ngIf="conversation.answer">
+            <div class="message-text">{{conversation.answer}}</div>
+        </div>
+    </div>
+    <div class="question">
+        <input [(ngModel)]="questionUser" type="text" name="question" placeholder="Digite sua pergunta aqui"/>
+        <button (click)="submit()">Enviar</button>
+    </div>
+   </div>
+</div>
+
+<!--
+<p>Perguntas do usuário</p>
+<tr *ngFor="let question of questions">
+    <td>{{question.question}}</td>
+    <td>{{question.id}}</td>
+</tr>
+
+<p>Respostas do ChatBot</p>
+<tr *ngFor="let answer of answers">
+    <p>{{answer.answer}}</p>
+</tr>
+
+
+<div class="container" >
+    <input [(ngModel)]="questionUser" type="text" name="question" placeholder="Digite sua pergunta aqui"/>
+    <button (click)="submit()" >Enviar</button>
+
+</div>
+ -->

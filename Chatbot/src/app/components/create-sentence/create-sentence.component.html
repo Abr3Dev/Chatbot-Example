@@ -1,0 +1,33 @@
+<p>Crie sua sentença</p>
+
+<div class="container">
+    <input type="text" [(ngModel)]="question.question" name="question" placeholder="questão"/>
+    <input type="text" [(ngModel)]="answer.answer" name="answer" placeholder="Resposta"/>
+
+    <button (click)="createSentence()">Cadastrar</button>
+</div>
+
+<p>Minhas questoes!</p>
+
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Pergunta</th>
+          <th>Resposta da pergunta</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr *ngFor="let answer of answers">
+          <td>{{answer.id}}</td>
+          <td>{{answer.answer}}</td>
+          <td>{{answer.idQuestion}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

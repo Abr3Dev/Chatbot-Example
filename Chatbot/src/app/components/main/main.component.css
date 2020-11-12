@@ -1,0 +1,119 @@
+.container{
+    background-color: #CCCFCF;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.chat{
+    border-radius: 15px;
+    width: 60%;
+    margin : 0 auto;
+    height: 90vh;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.question{
+    bottom: 0;
+    display:flex;
+    justify-content: flex-end;  
+    background: white
+}
+.question > input{
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 0 none;
+    outline: 0;
+}
+.question > input:focus{
+  border: solid thin #00B0E6
+}
+.question > button{
+    width: 30%;
+    background: #4caf50;
+    border: 0 none;
+    outline: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.question > button:active{
+  background: #308C34;
+}
+
+
+/* Messages baloon */
+.message {
+  margin: 10px 0;
+  overflow: hidden;
+}
+.message-text {
+  padding: 10px 20px;
+  float: right;
+  clear: both;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: 1px;
+}
+.message.left .message-text {
+  margin-right: 70px;
+  margin-left: 20px;
+  background-color: #CCCFCF;
+  float: left;
+}
+.message.right .message-text {
+  margin-left: 70px;
+  margin-right: 20px;
+  background-color: #00B0E6;
+  color: #fff;
+  float: right;
+}
+/* #36a9fc; */
+
+.message-text:last-child:before,
+.message-text:last-child:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 25px;
+  z-index: -1;
+}
+
+.message.right .message-text:before,
+.message.right .message-text:after {
+  border-radius: 0 0 0 50%;
+}
+.message.right .message-text:before {
+  height: 20px;
+  right: -23px;
+  background-color: #36a9fc;
+}
+.message.right .message-text:after {
+  right: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
+
+
+.message.left .message-text:before,
+.message.left .message-text:after {
+  border-radius: 0 0 50% 0;
+}
+.message.left .message-text:before {
+  height: 20px;
+  left: -23px;
+  background-color: #e5e5ea;
+}
+.message.left .message-text:after {
+  left: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
